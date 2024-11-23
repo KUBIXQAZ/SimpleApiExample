@@ -16,7 +16,7 @@ namespace API.Controllers
         }
 
         // Endpoint obsługujący logowanie na podstawie nazwy użytkownika i hasła
-        [HttpGet("login/{username}/{password}")]
+        [HttpGet("Login/{username}/{password}")]
         public IActionResult Login(string username, string password)
         {
             try

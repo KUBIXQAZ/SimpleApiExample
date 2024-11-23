@@ -7,7 +7,7 @@ namespace API.Controllers
     public class OperationsController : Controller
     {
         // Endpoint do dodawania dwóch liczb
-        [HttpGet("add/{first}/{second}")]
+        [HttpGet("Add/{first}/{second}")]
         public IActionResult Add(string first, string second)
         {
             try
@@ -29,7 +29,7 @@ namespace API.Controllers
         }
 
         // Endpoint do odejmowania dwóch liczb
-        [HttpGet("subtract/{first}/{second}")]
+        [HttpGet("Subtract/{first}/{second}")]
         public IActionResult Subtract(string first, string second)
         {
             try
@@ -51,7 +51,7 @@ namespace API.Controllers
         }
 
         // Endpoint do mnożenia dwóch liczb
-        [HttpGet("multiply/{first}/{second}")]
+        [HttpGet("Multiply/{first}/{second}")]
         public IActionResult Multiply(string first, string second)
         {
             try
@@ -73,8 +73,8 @@ namespace API.Controllers
         }
 
         // Endpoint do dzielenia dwóch liczb
-        [HttpGet("devide/{first}/{second}")]
-        public IActionResult Devide(string first, string second)
+        [HttpGet("Divide/{first}/{second}")]
+        public IActionResult Divide(string first, string second)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace API.Controllers
                 float b = float.Parse(second);
 
                 // Sprawdzenie czy dzielenie przez 0
-                if (b == 0) return BadRequest("You can't devide by 0.");
+                if (b == 0) return BadRequest("You can't divide by 0.");
 
                 // Zwrócenie wyniku dzielenia
                 return Ok(a / b);
